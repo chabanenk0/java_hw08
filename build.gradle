@@ -2,13 +2,19 @@ group 'java_hw08'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'jacoco'
 
-sourceCompatibility = 1.5
-
+// In this section you declare where to find the dependencies of your project
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
+// In this section you declare the dependencies for your production and test code
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.slf4j:slf4j-api:1.7.7'
+
+    // JUnit and Mockito
+    testCompile "junit:junit:4.11"
+    testCompile "org.mockito:mockito-core:1.+"
 }
+
